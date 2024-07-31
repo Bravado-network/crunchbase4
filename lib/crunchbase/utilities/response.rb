@@ -58,8 +58,10 @@ module Crunchbase
 
         return value if value.nil? || value.is_a?(String)
         return parse_items(value, name) if value.is_a?(Array) && value[0].is_a?(Hash) && value[0].keys.include?('value')
-        return value.dig('value_usd') if value.is_a?(Hash) && value.keys.include?('value_usd')
-        return value.dig('value') if value.is_a?(Hash) && value.keys.include?('value')
+        ##### BRAVADO CHANGES: Commented this part because in some cases we have to use 'value' instead 'value_usd'
+        # return value.dig('value_usd') if value.is_a?(Hash) && value.keys.include?('value_usd')
+        # return value.dig('value') if value.is_a?(Hash) && value.keys.include?('value')
+        #####
 
         value
       end
