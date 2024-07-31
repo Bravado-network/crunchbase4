@@ -33,7 +33,9 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'faraday'
   spec.add_dependency 'faraday_curl'
-  spec.add_dependency 'faraday_middleware'
+  ##### BRAVADO CHANGES START
+  # spec.add_dependency 'faraday_middleware'
+  ##### BRAVADO CHANGES END
   spec.add_dependency 'httparty'
 
   # VCR for testing APIs

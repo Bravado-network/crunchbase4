@@ -1,7 +1,9 @@
 # frozen_string_literal: true
 
 require 'faraday'
-require 'faraday_middleware'
+##### BRAVADO CHANGES START
+# require 'faraday_middleware'
+##### BRAVADO CHANGES END
 require 'faraday_curl'
 require 'logger'
 require_relative '../errors'
